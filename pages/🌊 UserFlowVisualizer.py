@@ -171,8 +171,8 @@ class UserFlowVisualizer:
         self.save()
 
     def _add_expand_delete_buttons(self, screen) -> None:
-        st.subheader(screen)
-        cols = st.columns(2)
+        st.sidebar.subheader(screen)
+        cols = st.sidebar.columns(2)
         cols[0].button(
             label="Expand",
             on_click=self.ask_for_extended_flow,
