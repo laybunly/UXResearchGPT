@@ -25,10 +25,9 @@ with col2:
     st.write("<br>", unsafe_allow_html=True)
     st.write(apps['Create a Persona'])
 
-
 with col3:
     st.title('🛣️')
     st.subheader('Create a Journey Map')
     st.write(apps['Create a Journey Map'])
 
- st.write('To get started, simply select an app from the menu on the left side')
+st.write('To get started, simply select an app from the menu on the left side.')
