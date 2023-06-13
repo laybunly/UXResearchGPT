@@ -1,5 +1,4 @@
 import streamlit as st
-from streamlit_emoji import Emoji
 from pages import InterviewQuestions, PersonaCreator, JourneyBuilder
 
 PAGES = {
