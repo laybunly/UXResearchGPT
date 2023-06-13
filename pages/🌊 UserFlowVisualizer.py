@@ -16,6 +16,10 @@ from streamlit_agraph import agraph, Node, Edge, Config
 # set title of page (will be seen in tab) and the width
 st.set_page_config(page_title="User Flow Visualizer", layout="wide")
 
+with st.sidebar:
+    st.write("The User Flow Visualizer is a tool that allows you to create and modify user flow graphs. It helps you visualize the flow between screens or pages in an application, making it easier to understand and design user experiences.")
+
+
 COLOR = "#1798c1"
 FOCUS_COLOR = "red"
 os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
