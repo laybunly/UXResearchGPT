@@ -19,9 +19,9 @@ with col1:
     st.write(apps['Create Interview Questions'])
 
 with col2:
-    st.header('👤 Create a Persona')
+    st.header('👤 Create a Persona''<br>')
     st.write(apps['Create a Persona'])
 
 with col3:
-    st.header('🛣️  Create a Journey Map')
+    st.header('🛣️  Create a Journey Map''<br>')
     st.write(apps['Create a Journey Map'])
