@@ -171,8 +171,8 @@ class UserFlowVisualizer:
         self.save()
 
     def _add_expand_delete_buttons(self, screen) -> None:
-        st.sidebar.subheader(screen)
-        cols = st.sidebar.columns(2)
+        st.subheader(screen)
+        cols = st.columns(2)
         cols[0].button(
             label="Expand",
             on_click=self.ask_for_extended_flow,
@@ -208,17 +208,17 @@ class UserFlowVisualizer:
 def main():
     user_flow_visualizer = UserFlowVisualizer.load()
 
-    st.sidebar.title("User Flow Visualizer")
+    st.title("User Flow Visualizer")
 
     empty = user_flow_visualizer.is_empty()
-    reset = empty or st.sidebar.checkbox("Reset user flow", value=False)
-    query = st.sidebar.text_area(
+    reset = empty or st.checkbox("Reset user flow", value=False)
+    query = st.text_area(
         "Describe your user flow" if reset else "Describe how to change your user flow",
         value=st.session_state.get("flow-input", ""),
         key="flow-input",
         height=200
     )
-    submit = st.sidebar.button("Submit")
+    submit = st.button("Submit")
 
     valid_submission = submit and query != ""
 
