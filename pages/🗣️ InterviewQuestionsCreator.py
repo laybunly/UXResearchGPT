@@ -12,6 +12,10 @@ os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
 # App framework
 st.title('User Research Interview Questions Generator')
 
+with st.sidebar:
+    st.write("The Interview Questions Creator is a tool to generate tailored interview questions for user research. By providing relevant information about the research topic and the target audience, you can receive a set of interview questions customized to your needs.")
+
+
 # User Profile (required field)
 user_profile = st.text_input('User Profile', placeholder="e.g. College students using learning apps")
 

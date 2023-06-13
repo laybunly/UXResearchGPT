@@ -14,6 +14,11 @@ os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
 st.title('User Journey Map Creator')
 default_value = " "
 persona_description = st.text_area('Who is your Persona?', placeholder="Tom is a project manager at a tech company in Silicon Valley, striving for efficiency and timely delivery within budget constraints. His main pain points are unexpected last-minute changes and scope creep, which cause delays and budget overruns.", height=200)
+
+with st.sidebar:
+    st.write("The Journey Builder is a tool to create journey maps based on personas. It allows you to visualize the user journey and understand the various touchpoints and interactions. Provide a persona as input, and the Journey Builder will generate a comprehensive journey map based on that persona.")
+
+
 # Optional attributes
 with st.expander('Detailed Persona Description (optional)'):
     pain_points = st.text_input('Pain Points', placeholder=default_value)
