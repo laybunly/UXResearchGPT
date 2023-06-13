@@ -211,15 +211,7 @@ def main():
 
     st.title("User Flow Visualizer")
     with st.sidebar:
-        st.write("The User Flow Visualizer is a tool that allows you to create and modify user flow graphs. It helps you visualize the flow between screens or pages in an application, making it easier to understand and design user experiences.")
-        
-        st.subheader("Explanation")
-        st.write("The User Flow Visualizer AI can generate user flow graphs based on given inputs or instructions. You can construct or modify the user flow graph using the following actions:")
-        st.write("1. add(screen1, screen2) - add a connection between screen1 and screen2")
-        st.write("2. delete(screen1, screen2) - delete the connection between screen1 and screen2")
-        st.write("3. delete(screen1) - delete the screen and all its connections")
-        st.write("Note: The graph is a directed graph representing the flow from one screen to another.")
-        
+        st.sidebar.write("The User Flow Visualizer is a tool that allows you to create and modify user flow graphs. It helps you visualize the flow between screens or pages in an application, making it easier to understand and design user experiences.")
     empty = user_flow_visualizer.is_empty()
     reset = empty or st.checkbox("Reset user flow", value=False)
     query = st.text_area(
