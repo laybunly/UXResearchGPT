@@ -11,7 +11,7 @@ from langchain.memory import ConversationBufferMemory
 os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
 
 # App framework
-st.title('Persona Creator')
+st.title('👤 Persona Creator')
 
 # Include text in the sidebar
 with st.sidebar:

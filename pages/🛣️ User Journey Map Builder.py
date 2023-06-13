@@ -11,7 +11,7 @@ from langchain.memory import ConversationBufferMemory
 os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
 
 # App framework
-st.title('User Journey Map Creator')
+st.title('🛣️ User Journey Map Builder')
 default_value = " "
 persona_description = st.text_area('Who is your Persona?', placeholder="Tom is a project manager at a tech company in Silicon Valley, striving for efficiency and timely delivery within budget constraints. His main pain points are unexpected last-minute changes and scope creep, which cause delays and budget overruns.", height=200)
 
