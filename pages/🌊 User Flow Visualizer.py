@@ -76,7 +76,6 @@ def ask_chatgpt(conversation: List[Message]) -> Tuple[str, List[Message]]:
 
 class UserFlowVisualizer:
     """A class that represents a user flow visualizer."""
-    user_flow_visualizer = UserFlowVisualizer.load()
 
     def __init__(self, connections: Optional[List[Tuple[str, str]]] = None, screens: Optional[List[str]] = None) -> None:
         self.connections = [] if connections is None else connections
