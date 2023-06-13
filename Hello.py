@@ -20,17 +20,14 @@ with col1:
     st.write(apps['Create Interview Questions'])
 
 with col2:
-    st.markdown(
-        """
-        <div style="text-align: center;">
-            <h2>👤 Create a Persona</h2>
-            <p>{}</p>
-        </div>
-        """.format(apps['Create a Persona']),
-        unsafe_allow_html=True
-    )
+    st.title('👤')
+    st.subheader('Create a Persona')
+    st.write("<br>", unsafe_allow_html=True)
+    st.write(apps['Create a Persona'])
+
 
 with col3:
-    st.header('🛣️  Create a Journey Map')
+    st.title('🛣️')
+    st.subheader('Create a Journey Map')
     st.write("<br>", unsafe_allow_html=True)
     st.write(apps['Create a Journey Map'])
