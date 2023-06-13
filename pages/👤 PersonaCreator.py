@@ -13,6 +13,11 @@ os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
 # App framework
 st.title('Persona Creator')
 
+# Include text in the sidebar
+with st.sidebar:
+    st.write("The Persona Creator is a tool to generate detailed personas for UX research and design. Enter information about your target audience, and it will create a comprehensive persona profile. Use these personas to understand user needs and make user-centric design decisions.")
+
+
 # Create the input fields with placeholders
 role = st.text_input('Enter the persona`s role', placeholder='e.g. Manager')
 industry = st.text_input('Enter the industry the persona is working in', placeholder='e.g. Automotive')
