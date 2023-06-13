@@ -20,8 +20,10 @@ with col1:
 
 with col2:
     st.header('👤 Create a Persona''<br>')
+    st.write("<br>", unsafe_allow_html=True)
     st.write(apps['Create a Persona'])
 
 with col3:
     st.header('🛣️  Create a Journey Map''<br>')
+    st.write("<br>", unsafe_allow_html=True)
     st.write(apps['Create a Journey Map'])
