@@ -1,4 +1,5 @@
 import streamlit as st
+from pages import PersonaCreator, JourneyBuilder
 
 st.title('Welcome to the UX Research GPT App!')
 
