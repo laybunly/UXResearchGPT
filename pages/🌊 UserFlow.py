@@ -16,7 +16,7 @@ from streamlit_agraph import agraph, Node, Edge, Config
 # set title of page (will be seen in tab) and the width
 st.set_page_config(page_title="User Flow Visualizer", layout="wide")
 
-COLOR = "cyan"
+COLOR = "#1798c1"
 FOCUS_COLOR = "red"
 os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
 
