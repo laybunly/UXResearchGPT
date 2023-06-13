@@ -15,15 +15,17 @@ col1, col2, col3 = st.columns(3)
 
 # Render each app in a separate column
 with col1:
-    st.header('🗣️ Create Interview Questions')
+    st.header('🗣️')
+    st.title('Create Interview Questions')
     st.write(apps['Create Interview Questions'])
 
 with col2:
-    st.header('👤 Create a Persona''<br>')
+    st.header('👤 Create a Persona')
+    st.write("<br>", unsafe_allow_html=True)
     st.write("<br>", unsafe_allow_html=True)
     st.write(apps['Create a Persona'])
 
 with col3:
-    st.header('🛣️  Create a Journey Map''<br>')
+    st.header('🛣️  Create a Journey Map')
     st.write("<br>", unsafe_allow_html=True)
     st.write(apps['Create a Journey Map'])
