@@ -1,7 +1,7 @@
 import streamlit as st
 from pages import PersonaCreator, JourneyBuilder
 
-st.title('Welcome to the UX Research GPT App!')
+st.title('Welcome to the UX Research GPT!')
 
 # Define the apps and their descriptions
 apps = {
@@ -15,13 +15,13 @@ col1, col2, col3 = st.columns(3)
 
 # Render each app in a separate column
 with col1:
-    st.header('Create Interview Questions')
+    st.header('🗣️ Create Interview Questions')
     st.write(apps['Create Interview Questions'])
 
 with col2:
-    st.header('Create a Persona')
+    st.header('👤 Create a Persona')
     st.write(apps['Create a Persona'])
 
 with col3:
-    st.header('Create a Journey Map')
+    st.header('🛣️  Create a Journey Map')
     st.write(apps['Create a Journey Map'])
