@@ -30,3 +30,5 @@ with col3:
     st.title('🛣️')
     st.subheader('Create a Journey Map')
     st.write(apps['Create a Journey Map'])
+
+ st.write('To get started, simply select an app from the menu on the left side')
