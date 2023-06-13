@@ -7,7 +7,7 @@ st.title('Welcome to the UX Research GPT!')
 apps = {
     'Create Interview Questions': 'Maximize your user interview sessions by providing relevant information and receiving tailored interview questions.',
     'Create a Persona': 'Enter information and receive a detailed description of the persona.',
-    'Create a Journey Map': 'Based on a created persona, you can generate a journey map.'
+    'Create a Journey Map': 'Based on a created persona, you can generate a journey map.',
     'Create a User Flow': 'Visualize and design user flows for your applications.'
 }
 
