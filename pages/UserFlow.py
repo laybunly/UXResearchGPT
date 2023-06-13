@@ -18,7 +18,7 @@ st.set_page_config(page_title="User Flow Visualizer", layout="wide")
 
 COLOR = "cyan"
 FOCUS_COLOR = "red"
-os.environ['OPENAI_API_KEY'] = 'your_openai_api_key_here'
+os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
 
 @dataclass
 class Message:
