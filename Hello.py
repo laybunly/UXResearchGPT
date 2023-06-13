@@ -27,10 +27,11 @@ with col2:
     st.title('👤')
     st.subheader('Create a Persona')
     st.write(apps['Create a Persona'])
-    
+
     st.write("<br>", unsafe_allow_html=True)
     st.title('🌊')
     st.subheader('Create a User Flow')
     st.write(apps['Create a User Flow'])
 
-st.write('To get started, simply select an app from the menu on the left side.')
+st.write("<br>", unsafe_allow_html=True)
+st.subheader('To get started, simply select an app from the menu on the left side.')
