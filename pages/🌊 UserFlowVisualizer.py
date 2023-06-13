@@ -209,7 +209,7 @@ class UserFlowVisualizer:
 def main():
     user_flow_visualizer = UserFlowVisualizer.load()
 
-    st.sidebar.title("User Flow Visualizer")
+    st.sidebar.title("User Fow Visualizer")
 
     empty = user_flow_visualizer.is_empty()
     reset = empty or st.sidebar.checkbox("Reset user flow", value=False)
