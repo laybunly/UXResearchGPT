@@ -1,27 +1,28 @@
 import streamlit as st
-from pages import PersonaCreator, JourneyBuilder
+from streamlit_emoji import Emoji
+from pages import InterviewQuestions, PersonaCreator, JourneyBuilder
 
 PAGES = {
-    "Start": PersonaCreator,
-    "Page 2: Journey Map": JourneyBuilder
+    "Create Interview Questions": InterviewQuestions,
+    "Create a Persona": PersonaCreator,
+    "Create a Journey Map": JourneyBuilder
 }
 
 st.title('Welcome to the UX Research GPT App!')
-st.write('''
-    With this application, you can:
-    - [Create Interview Questions 🗣️](https://uxresearchgpt.streamlit.app/InterviewQuestionsCreator): 
-    Maximize your user interview sessions by providing relevant information and receiving tailored interview questions.
 
-    - [Create a Persona 👤](https://uxresearchgpt.streamlit.app/PersonaCreator): 
-    Enter information and receive a detailed description of the persona.
-    
-    - [Create a Journey Map 🛣️](https://uxresearchgpt.streamlit.app/JourneyBuilder): 
-    Based on a created persona, you can generate a journey map.
+col1, col2, col3 = st.beta_columns(3)
 
-    To get started, simply select an app from the menu on the left side or click on the links in the description above.
+with col1:
+    st.header("Create Interview Questions")
+    st.write("Maximize your user interview sessions by providing relevant information and receiving tailored interview questions.")
+    st.write("Description of the app goes here.")
 
+with col2:
+    st.header("Create a Persona")
+    st.write("Enter information and receive a detailed description of the persona.")
+    st.write("Description of the app goes here.")
 
-
-''')
-
-
+with col3:
+    st.header("Create a Journey Map")
+    st.write("Based on a created persona, you can generate a journey map.")
+    st.write("Description of the app goes here.")
