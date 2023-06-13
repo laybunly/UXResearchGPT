@@ -2,3 +2,8 @@ streamlit
 streamlit-tags
 openai
 langchain
+
+matplotlib
+networkx
+graphviz
+streamlit-agraph
