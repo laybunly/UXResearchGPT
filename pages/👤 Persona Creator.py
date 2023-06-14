@@ -21,7 +21,7 @@ with st.sidebar:
 # Create the input fields with placeholders
 role = st.text_input('Enter the persona`s role', placeholder='e.g. Manager')
 industry = st.text_input('Enter the industry the persona is working in', placeholder='e.g. Automotive')
-socio = st.text_input('Describe the socio-cultural aspects of your persona', placeholder='e.g. 43 years old, single, from Germany, based in Japan')
+socio = st.text_input('Describe the socio-cultural aspects of your persona (optional)', placeholder='e.g. 43 years old, single, from Germany, based in Japan')
 additional = st.text_input('Additional information (optional)', placeholder='Additional information')
 
 keywords = st_tags(
@@ -54,7 +54,7 @@ journey_chain = LLMChain(llm=llm, prompt=journey_template, verbose=True, output_
 
 # Show stuff on the screen if there's a prompt
 if st.button('Generate Persona'):
-    if role and industry and additional: 
+    if role and industry: 
         persona = persona_chain.run(role=role, industry=industry, additional=additional, keywords=keywords, socio=socio)
         st.write(persona) 
         with st.expander('Persona History'): 
