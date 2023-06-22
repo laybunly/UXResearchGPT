@@ -36,7 +36,7 @@ keywords = st_tags(
 # Prompt templates
 persona_template = PromptTemplate(
     input_variables=['role', 'industry', 'additional', 'keywords', 'socio'], 
-    template='Act as a professional HCC Consultant/ Enablement architect / trainer who needs to write a script text for a training video / short tutorial for Salesforce products, directly addressing the end users with the role of {role} in the following industry: {industry}. Keep in mind the learner`s background {socio} and additional information on the language, tone, length etc. {additional}. Include paragraphs for the following sections: {keywords}. Please split the text sections into paragraphs and then start in a new line.'
+    template='Act as a professional HCC Consultant/ Enablement architect / trainer who needs to write a extensive script text for a training video / short tutorial for Salesforce products, directly addressing the end users with the role of {role} in the following industry: {industry}. Keep in mind the learner`s background {socio} and additional information on the language, tone, length etc. {additional}. Include explanations for the following topics: {keywords}. Please start with a general introduction about what is happening and end with an outro text. Remember this script needs to be extensive.'
 )
 
 journey_template = PromptTemplate(
