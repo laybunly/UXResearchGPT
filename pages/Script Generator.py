@@ -19,6 +19,7 @@ with st.sidebar:
 
 
 # Create the input fields with placeholders
+persona_description = st.text_area('What is the content of your video?', placeholder="Step 1: Global Opportunity page Layout, Step 1.1: Account Information: = is linked to the Legal Entity account including 1.1) Territory", height=200)
 role = st.text_input('Enter the persona`s role', placeholder='e.g. Manager')
 industry = st.text_input('Enter the industry the persona is working in (optional)', placeholder='e.g. Automotive')
 socio = st.text_input('Describe the learner`s background and previous experience with the product to be trained (optional)', placeholder='e.g., Digital native, has 4 years of experience with Sales Cloud, uses Account and Opportunity Management on a daily basis')
@@ -36,7 +37,7 @@ keywords = st_tags(
 # Prompt templates
 persona_template = PromptTemplate(
     input_variables=['role', 'industry', 'additional', 'keywords', 'socio'], 
-    template='Act as a professional HCC Consultant/ Enablement architect / trainer who needs to write a extensive script text for a training video / short tutorial for Salesforce products with at least 1000 characters, directly addressing the end users with the role of {role} in the following industry: {industry}. Keep in mind the learner`s background {socio} and additional information on the language, tone, length etc. {additional}. Include explanations for the following topics: {keywords}. Please start with a general introduction about what is happening and end with an outro text. Remember this script needs to be extensive.'
+    template='You are a video script text generator. I need you to create a text script for video that will be read for a training video. It is about Salesforce software. I will give you just the bullet points of the topics and I need you to create a text that will be read by someone, while the video runs, in the video the topics are shown. These are the bullet points: {persona_description}'
 )
 
 journey_template = PromptTemplate(
@@ -54,8 +55,8 @@ journey_chain = LLMChain(llm=llm, prompt=journey_template, verbose=True, output_
 
 # Show stuff on the screen if there's a prompt
 if st.button('Generate Script'):
-    if role: 
-        persona = persona_chain.run(role=role, industry=industry, additional=additional, keywords=keywords, socio=socio)
+    if persona_description: 
+        persona = persona_chain.run(persona_description=persona_description)
         st.write(persona) 
         with st.expander('Persona History'): 
             st.info(memory.buffer)
