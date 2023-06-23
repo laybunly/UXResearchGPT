@@ -37,7 +37,7 @@ kpis = st.text_input('Key Performance Indicators (optional)', placeholder="")
 # Prompt templates
 interview_template = PromptTemplate(
     input_variables=['user_profile', 'context', 'research_objectives', 'product_details', 'past_user_data', 'kpis'],
-    template='Based on the user profile: {user_profile}, context: {context}, research objectives: {research_objectives}, product details: {product_details}, past user data: {past_user_data}, and KPIs: {kpis}, generate a set of user research interview questions.'
+    template='Given the following information, generate a set of 10 user research interview questions: * User profile: {user_profile} * Product details: {product_details} * Research objectives: {research_objectives} * Contextual information: {context} * Past user data: {past_user_data} * Key Performance Indicators (KPIs): {kpis} For example, if the product is an app designed to help users manage their time better, a potential question might be, "How do you currently keep track of your daily tasks?"'
 )
 
 # Memory
