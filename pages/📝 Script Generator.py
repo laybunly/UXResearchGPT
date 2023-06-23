@@ -10,7 +10,7 @@ from langchain.memory import ConversationBufferMemory
 os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
 
 # App framework
-st.title('👤 Script Generator')
+st.title('📝  Script Generator')
 
 # Include text in the sidebar
 with st.sidebar:
@@ -38,5 +38,5 @@ if st.button('Generate Script'):
     if persona_description: 
         persona = persona_chain.run(persona_description=persona_description)
         st.write(persona) 
-        with st.expander('Persona History'): 
+        with st.expander('Script History'): 
             st.info(memory.buffer)
