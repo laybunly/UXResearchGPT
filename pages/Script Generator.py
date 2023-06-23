@@ -20,10 +20,10 @@ with st.sidebar:
 
 # Create the input fields with placeholders
 persona_description = st.text_area('What is the content of your video?', placeholder="Step 1: Global Opportunity page Layout, Step 1.1: Account Information: = is linked to the Legal Entity account including 1.1) Territory", height=200)
-role = st.text_input('Enter the persona`s role', placeholder='e.g. Manager')
-industry = st.text_input('Enter the industry the persona is working in (optional)', placeholder='e.g. Automotive')
-socio = st.text_input('Describe the learner`s background and previous experience with the product to be trained (optional)', placeholder='e.g., Digital native, has 4 years of experience with Sales Cloud, uses Account and Opportunity Management on a daily basis')
-additional = st.text_input('Additional information regarding your script (optional)', placeholder='e.g., formal language, very short sentences')
+#role = st.text_input('Enter the persona`s role', placeholder='e.g. Manager')
+#industry = st.text_input('Enter the industry the persona is working in (optional)', placeholder='e.g. Automotive')
+#socio = st.text_input('Describe the learner`s background and previous experience with the product to be trained (optional)', placeholder='e.g., Digital native, has 4 years of experience with Sales Cloud, uses Account and Opportunity Management on a daily basis')
+#additional = st.text_input('Additional information regarding your script (optional)', placeholder='e.g., formal language, very short sentences')
 
 keywords = st_tags(
     label='# What needs to be included in the script?',
@@ -37,7 +37,7 @@ keywords = st_tags(
 # Prompt templates
 persona_template = PromptTemplate(
     input_variables=['role', 'industry', 'additional', 'keywords', 'socio'], 
-    template='You are a video script text generator. I need you to create a text script for video that will be read for a training video. It is about Salesforce software. I will give you just the bullet points of the topics and I need you to create a text that will be read by someone, while the video runs, in the video the topics are shown. These are the bullet points: {persona_description}'
+    template='You are a video script text generator. I need you to create a text script for video that will be read for a training video. It is about Salesforce software. I will give you just the bullet points of the topics and I need you to create a text that will be read by someone, while the video runs, in the video the topics are shown. These are the bullet points: {persona_description}. Always start with an introduction and end with an outro.'
 )
 
 journey_template = PromptTemplate(
