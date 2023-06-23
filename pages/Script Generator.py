@@ -36,7 +36,7 @@ keywords = st_tags(
 
 # Prompt templates
 persona_template = PromptTemplate(
-    input_variables=['role', 'industry', 'additional', 'keywords', 'socio'], 
+    input_variables=['persona_description'], 
     template='You are a video script text generator. I need you to create a text script for video that will be read for a training video. It is about Salesforce software. I will give you just the bullet points of the topics and I need you to create a text that will be read by someone, while the video runs, in the video the topics are shown. These are the bullet points: {persona_description}. Always start with an introduction and end with an outro.'
 )
 
