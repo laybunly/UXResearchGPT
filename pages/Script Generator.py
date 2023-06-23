@@ -30,7 +30,7 @@ persona_template = PromptTemplate(
 memory = ConversationBufferMemory(input_key='persona_description', memory_key='chat_history')
 
 # Llms
-llm = OpenAI(temperature=0.9) 
+llm = OpenAI(temperature=0.9, max_tokens=1024) 
 persona_chain = LLMChain(llm=llm, prompt=persona_template, verbose=True, output_key='persona', memory=memory)
 
 # Show stuff on the screen if there's a prompt
